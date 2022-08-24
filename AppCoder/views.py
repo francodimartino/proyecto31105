@@ -13,4 +13,22 @@ def curso(request):
     texto=f"cursos creados"
     return HttpResponse(texto)
 
+def inicio(request):
+    return render (request, "AppCoder/inicio.html")
+
+def cursos(request):
+    return render (request, "AppCoder/cursos.html")
+
+
+def estudiantes(request):
+    return render (request, "AppCoder/estudiantes.html")
+
+def profesores(request):
+    return render (request, "AppCoder/profesores.html")
+
+def entregables(request):
+    return render (request, "AppCoder/entregables.html")
+
+
+
 
