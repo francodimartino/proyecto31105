@@ -1,16 +1,20 @@
 from django.shortcuts import render
-from .models import Curso
+from .models import Curso, Estudiante
 from django.http import HttpResponse
 # Create your views here.
 
 def curso(request):
-    curso=Curso(nombre="AWS", comision=3)
-    curso2=Curso(nombre="Lengua", comision=1)
-    curso3=Curso(nombre="Matematica", comision=2)
+
+    
+    nombre = request.POST.get("nombre")
+    comision = request.POST.get("comision")
+    curso = Curso(nombre=nombre, comision=comision)
     curso.save()
-    curso2.save()
-    curso3.save()
-    texto=f"cursos creados"
+    curso=Curso(nombre="curso creado en el ejemplo", comision=0)
+    print("CREANDO CURSO")
+    curso.save()
+    
+    texto=f"curso creado"
     return HttpResponse(texto)
 
 def inicio(request):
@@ -28,6 +32,10 @@ def profesores(request):
 
 def entregables(request):
     return render (request, "AppCoder/entregables.html")
+
+
+
+
 
 
 
