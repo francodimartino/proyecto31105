@@ -3,11 +3,11 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5">FORMULARIO DE CURSOS</h1>
+<h1 class="mb-5">FORMULARIO DE PROFES</h1>
 {% endblock %}
 
 {% block contenido_que_cambia %}
-<form action="{% url 'cursos' %}" method="POST"> {% csrf_token %}
+<form action="{% url 'profeFormulario' %}" method="POST"> {% csrf_token %}
 
     <table>
         {{ formulario.as_table }}
