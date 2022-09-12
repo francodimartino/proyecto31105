@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">FORMULARIO DE REGISTRO</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h1>FORMULARIO DE REGISTRO</h1>
+<form action="{% url 'register' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <button type="submit">REGISTRATE</button>
+</form>
+
+<h2>{{ mensaje }}</h2>
+{% endblock %}
