@@ -118,3 +118,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_URL='/AppCoder/login/'
+
+#aca le decimos a django donde esta nuestra carpeta de imagenes
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

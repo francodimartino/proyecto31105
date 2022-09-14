@@ -28,6 +28,8 @@
                 <a class="btn btn-success" href="{% url 'estudiantes' %}">ESTUDIANTES</a>
                 
                 {% if user.is_authenticated %}
+                <h4> hola {{ user.username }}</h4>
+                <img height="50px" src="{{ avatar }}" alt="">
                 <a class="btn btn-primary" href="{% url 'logout' %}">DESLOGUEATE</a>
                 {% else %}
                 <a class="btn btn-primary" href="{% url 'login' %}">LOGUEATE</a>
